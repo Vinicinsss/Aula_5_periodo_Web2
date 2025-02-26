@@ -1,0 +1,4 @@
+docker ps (para ver todos os docker que estao rodando)
+docker ps -a (para ver todos os dockers abertos ou fechados)
+docker-compose up -d (para iniciar o docker)
+ mvn clean compile (para compilar o maven)
