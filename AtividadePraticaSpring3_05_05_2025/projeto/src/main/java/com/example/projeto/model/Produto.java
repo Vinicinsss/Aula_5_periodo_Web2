@@ -1,17 +1,17 @@
+// src/main/java/com/example/projeto/model/Produto.java
 package com.example.projeto.model;
-
-import java.math.BigDecimal;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "produtos")
-public class Produto{
-    
+public class Produto {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,7 +22,7 @@ public class Produto{
 
     public Produto() {}
 
-    public Produto(String nome, Integer quantidade, BigDecimal valor){
+    public Produto(String nome, Integer quantidade, BigDecimal valor) {
         this.nome = nome;
         this.quantidade = quantidade;
         this.valor = valor;
@@ -32,27 +32,24 @@ public class Produto{
         return id;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public String getNome() {
         return nome;
     }
-
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public Integer getQuantidade() {
         return quantidade;
     }
-
-    public void setValor(BigDecimal valor) {
-        this.valor = valor;
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
     }
 
     public BigDecimal getValor() {
         return valor;
+    }
+    public void setValor(BigDecimal valor) {
+        this.valor = valor;
     }
 }
