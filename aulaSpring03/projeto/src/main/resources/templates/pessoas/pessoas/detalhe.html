@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes da Pessoa</title>
+     <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div th:replace="fragments/navbar :: navbar"></div>
+
+    <main class="main-content">
+        <h1>Detalhes</h1>
+        <div>
+            <p><strong>ID:</strong> <span th:text="${pessoa.id}"></span></p>
+            <p><strong>Nome:</strong> <span th:text="${pessoa.nome}"></span></p>
+            <p><strong>Idade:</strong> <span th:text="${pessoa.idade}"></span></p>
+        </div>
+        <form th:action="@{/pessoas/{id}/excluir(id=${pessoa.id})}" method="post">
+            <button type="submit" class="botao">Excluir</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>2025 Meu App</p>
+    </footer>
+</body>
+
+</html>
