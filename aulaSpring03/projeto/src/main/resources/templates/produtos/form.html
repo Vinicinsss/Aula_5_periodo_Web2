@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Pessoas</title>
+    <title>Cadastrar Produtos</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 
@@ -13,8 +13,8 @@
 
     <main class="main-content">
 
-        <h1>Cadastrar Pessoas</h1>
-        <form th:action="@{/pessoas/cadastrar}" th:object="${pessoa}" method="post">
+        <h1>Cadastrar Produtos</h1>
+        <form th:action="@{/produtos/cadastrar}" th:object="${produto}" method="post">
             <div>
                 <label>Nome: </label>
                 <input type="text" th:field="*{nome}" placeholder="Nome Completo" />
@@ -22,9 +22,15 @@
             </div>
 
             <div>
-                <label>Idade: </label>
-                <input type="number" th:field="*{idade}" />
-                <div th:if="${#fields.hasErrors('idade')}" th:errors="*{idade}"></div>
+                <label>quantidade: </label>
+                <input type="number" th:field="*{quantidade}" />
+                <div th:if="${#fields.hasErrors('quantidade')}" th:errors="*{quantidade}"></div>
+            </div>
+
+             <div>
+                <label>valor: </label>
+                <input type="number" th:field="*{valor}" />
+                <div th:if="${#fields.hasErrors('valor')}" th:errors="*{valor}"></div>
             </div>
 
             <button type="submit" class="botao">Salvar</button>

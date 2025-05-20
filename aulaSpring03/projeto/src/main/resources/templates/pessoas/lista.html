@@ -9,14 +9,11 @@
 </head>
 
 <body>
-
     <div th:replace="fragments/navbar :: navbar"></div>
 
     <main class="main-content">
         <h1>Lista de Pessoas</h1>
-
-        <a th:href="@{pessoas/cadastrar}">Cadastrar Nova Pessoa</a>
-        <table border="1">
+        <table>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -31,7 +28,7 @@
                     <td th:text="${pessoa.nome}"></td>
                     <td th:text="${pessoa.idade}"></td>
                     <td>
-                        <a th:href="@{/pessoas/{id}(id=${pessoa.id})}">Detalhes</a>
+                        <a th:href="@{/pessoas/{id}(id=${pessoa.id})}" class="botao">Detalhes</a>
                     </td>
                 </tr>
             </tbody>
