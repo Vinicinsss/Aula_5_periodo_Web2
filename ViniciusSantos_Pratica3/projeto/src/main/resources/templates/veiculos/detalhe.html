@@ -4,22 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Detalhes do Veiculo</title>
-     <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 
 <body>
-
     <div th:replace="fragments/navbar :: navbar"></div>
 
     <main class="main-content">
         <h1>Detalhes</h1>
-        
         <table>
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Modelo</th>
-                    <th>ano</th>
+                    <th>Modelo/th>
+                    <th>Ano</th>
                     <th>Valor</th>
                     <th>Ações</th>
                 </tr>
@@ -30,7 +28,6 @@
                     <td th:text="${veiculo.modelo}"></td>
                     <td th:text="${veiculo.ano}"></td>
                     <td th:text="${veiculo.valor}"></td>
-
                     <td>
                         <form th:action="@{/veiculos/{id}/excluir(id=${veiculo.id})}" method="post">
                             <button type="submit" class="botao">Excluir</button>
@@ -39,9 +36,11 @@
                 </tr>
             </tbody>
         </table>
-
     </main>
 
+    <footer>
+        <p>2025 Meu App</p>
+    </footer>
 </body>
 
 </html>

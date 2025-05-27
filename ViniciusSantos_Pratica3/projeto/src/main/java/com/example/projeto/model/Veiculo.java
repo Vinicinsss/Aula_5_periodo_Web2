@@ -3,15 +3,14 @@ package com.example.projeto.model;
 import java.math.BigDecimal;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "veiculos")
 public class Veiculo {
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,7 +21,7 @@ public class Veiculo {
     public Veiculo() {
     }
 
-    public Veiculo(String modelo, Integer ano, BigDecimal valor){
+    public Veiculo(String modelo, Integer ano, BigDecimal valor) {
         this.modelo = modelo;
         this.ano = ano;
         this.valor = valor;
@@ -47,8 +46,7 @@ public class Veiculo {
     public Integer getAno() {
         return ano;
     }
-
-    public void setValor(BigDecimal valor) {
+        public void setValor(BigDecimal valor) {
         this.valor = valor;
     }
 

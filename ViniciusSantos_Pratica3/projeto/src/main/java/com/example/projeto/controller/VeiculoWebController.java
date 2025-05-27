@@ -48,7 +48,7 @@ public class VeiculoWebController {
             return "veiculos/form";
         }
         veiculoService.salvarVeiculo(veiculo);
-        ra.addFlashAttribute("success", "Veiculo cadastrado com sucesso!");
+        ra.addFlashAttribute("success", "Veiculo cadastrada com sucesso!");
         return "redirect:/veiculos/listar";
     }
 
@@ -64,7 +64,7 @@ public class VeiculoWebController {
     public String detalhesVeiculo(@PathVariable Long id, Model model) {
         Veiculo p = veiculoService.buscarPorId(id)
             .orElseThrow(() -> new ResponseStatusException(
-                HttpStatus.NOT_FOUND, "Veiculo não encontrado, id: " + id
+                HttpStatus.NOT_FOUND, "Veiculo não encontrada, id: " + id
             ));
         model.addAttribute("veiculo", p);
         return "veiculos/detalhe";
@@ -73,7 +73,7 @@ public class VeiculoWebController {
     @PostMapping("/{id}/excluir")
     public String excluirVeiculo(@PathVariable Long id, RedirectAttributes ra) {
         veiculoService.deletarVeiculo(id);
-        ra.addFlashAttribute("success", "Veiculo excluído com sucesso!");
+        ra.addFlashAttribute("success", "Veiculo excluída com sucesso!");
         return "redirect:/veiculos/listar";
     }
 }

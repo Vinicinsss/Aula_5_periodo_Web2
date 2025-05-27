@@ -1,14 +1,14 @@
 # Definição de variáveis (ambiente “local” do REST Client)
-@base_url = https://laughing-computing-machine-pjr6j6gqpp9xf6rj4-8080.app.github.dev
+@base_url = https://psychic-disco-7v9xvxr4rgp7frv4v-8080.app.github.dev
 
 ### Inserir novo veiculo
 POST {{ base_url }}/api/veiculos
 Content-Type: application/json
 
 {
-  "modelo": "Notebook",
-  "ano": 10,
-  "valor": 3899.99
+  "modelo": "bmw m4 g82",
+  "ano": 2024,
+  "valor": 1399950.00
 }
 
 ### Listar todos os veiculos
@@ -24,11 +24,11 @@ PUT {{ base_url }}/api/veiculos/1
 Content-Type: application/json
 
 {
-  "modelo": "Notebook",
-  "ano": 09,
-  "valor" : 5899.90 
+  "modelo": "Supra mk4",
+  "ano": 1995,
+  "valor": 1200000.00
 }
 
-### Remover pessoa (DELETE)
+### Remover veiculo (DELETE)
 DELETE {{ base_url }}/api/veiculos/1
 Accept: */*
